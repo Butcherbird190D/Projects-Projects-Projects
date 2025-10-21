@@ -1,0 +1,1 @@
+A small scrabble game that calculates the points for each word hard coded into the program.
