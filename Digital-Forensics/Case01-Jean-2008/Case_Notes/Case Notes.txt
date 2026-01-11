@@ -1,0 +1,31 @@
+Initial Date: 1/8/2026
+Examiner Name: Gavin Barnes
+Case ID: M57-Jean
+System Used: Windows 11 
+Hostname: Gjbar
+Source: Digital Corpora training image
+Evidence Details: 2 Pre-imaged Disk images (E01 format) 
+Tool Versions: Autopsy 4.22.1, FTK Imager 4.7.3.81, Eric Zimmerman Tools as of June 04, 2025
+Physical Hardware: 2 NTFS formatted 64GB SanDisk Cruzer Glide thumb drives. Local Desktop Machine.
+
+
+[Time] – Action – Rationale – Result
+
+1/9/2026
+[8:26] - E01 files (nps-2008-jean.E01 and nps-2008-jean.E02) downloaded off Digital Corpora into DFIR-A(NTFS) thumb drive - Standard procedure - Successfully Downloaded. Hash verified with SHA-256. 
+[8:34] - DFIR-B thumb drive(NTFS) organized for evidence transportation post-analyzation on local machine - Preparatory step - Successful.
+[8:40] - DFIR-B thumb drive(NTFS) ejected - Not needed yet - Successful.
+[8:57] - E01 files copied as working copy into local DFIR file (C:/DFIR) - Standard procedure - Completed; Hash Verified. Confirmed Bit-for-bit copy for published hash values.
+[9:11] - DFIR-A ejected - Standard procedure for maintaining integrity - Successful.
+[10:00] - Autopsy ingest initiated on M57-Jean image - Data retrieval step - Successful.
+
+1/10/2026
+[12:33] - M57-Jean image copies' hashes reverified - Sanity check
+[12:35] - Main user of image identified as Jean
+[12:43] - Preliminary search of personal documents reveals online chat logs between Jean and Alison. Opened in EZViewer (Eric Zimmerman Tools).
+[12:55] - Online chat logs are deemed inconsequential.
+[1:11] - Emails reveal heavy signs of tampering with Alison's email addresses. New actor: alex@m57.biz seems to be Alison. New persona is in control of alison@m57.biz. 
+
+1/11/2026
+[13:46] - Email analysis reveals details of previous email address theft. Alison's email changed from Alison@m57.biz to Alex@m57.biz on 2008-07-19 19:31:00. Alison@m57.biz is then used at 2008-07-19 19:32:51 to request sensitive documents.
+[13:50] - Tuckgorge@gmail.com Requested background check documents from Jean.
