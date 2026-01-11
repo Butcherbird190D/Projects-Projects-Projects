@@ -1,31 +1,60 @@
 Initial Date: 1/8/2026
-Examiner Name: Gavin Barnes
+Examiner: Gavin Barnes
 Case ID: M57-Jean
-System Used: Windows 11 
+System: Windows 11
 Hostname: Gjbar
-Source: Digital Corpora training image
-Evidence Details: 2 Pre-imaged Disk images (E01 format) 
-Tool Versions: Autopsy 4.22.1, FTK Imager 4.7.3.81, Eric Zimmerman Tools as of June 04, 2025
-Physical Hardware: 2 NTFS formatted 64GB SanDisk Cruzer Glide thumb drives. Local Desktop Machine.
+Evidence Source: Digital Corpora training image
+Evidence Details: 2 pre-imaged disk images (E01 format)
+Tools Used: Autopsy 4.22.1, FTK Imager 4.7.3.81, Eric Zimmerman Tools (June 2025)
+
+Final Verification: SHA-256 hashes confirmed for all evidence images
 
 
-[Time] – Action – Rationale – Result
+Timeline of Activities:
 
-1/9/2026
-[8:26] - E01 files (nps-2008-jean.E01 and nps-2008-jean.E02) downloaded off Digital Corpora into DFIR-A(NTFS) thumb drive - Standard procedure - Successfully Downloaded. Hash verified with SHA-256. 
-[8:34] - DFIR-B thumb drive(NTFS) organized for evidence transportation post-analyzation on local machine - Preparatory step - Successful.
-[8:40] - DFIR-B thumb drive(NTFS) ejected - Not needed yet - Successful.
-[8:57] - E01 files copied as working copy into local DFIR file (C:/DFIR) - Standard procedure - Completed; Hash Verified. Confirmed Bit-for-bit copy for published hash values.
-[9:11] - DFIR-A ejected - Standard procedure for maintaining integrity - Successful.
-[10:00] - Autopsy ingest initiated on M57-Jean image - Data retrieval step - Successful.
+1/9/2026 – Evidence Preparation & Initial Ingest
 
-1/10/2026
-[12:33] - M57-Jean image copies' hashes reverified - Sanity check
-[12:35] - Main user of image identified as Jean
-[12:43] - Preliminary search of personal documents reveals online chat logs between Jean and Alison. Opened in EZViewer (Eric Zimmerman Tools).
-[12:55] - Online chat logs are deemed inconsequential.
-[1:11] - Emails reveal heavy signs of tampering with Alison's email addresses. New actor: alex@m57.biz seems to be Alison. New persona is in control of alison@m57.biz. 
+08:26: Downloaded E01 files (nps-2008-jean.E01 and .E02) from Digital Corpora to DFIR-A thumb drive. Hash verified using SHA-256.
 
-1/11/2026
-[13:46] - Email analysis reveals details of previous email address theft. Alison's email changed from Alison@m57.biz to Alex@m57.biz on 2008-07-19 19:31:00. Alison@m57.biz is then used at 2008-07-19 19:32:51 to request sensitive documents.
-[13:50] - Tuckgorge@gmail.com Requested background check documents from Jean.
+08:34: Prepared DFIR-B thumb drive for evidence portability.
+
+08:57: Created working copy of E01 files on local DFIR storage. Bit-for-bit verification performed; hashes matched published values.
+
+09:11: DFIR-A drive ejected to maintain integrity.
+
+10:00: Initiated Autopsy ingest on M57-Jean image. Data retrieval completed successfully.
+
+
+1/10/2026 – Preliminary Analysis:
+
+12:33: Reverified hashes of working image copies as a sanity check.
+
+12:35: Identified main user of image as Jean.
+
+12:43: Examined personal documents; online chat logs between Jean and Alison reviewed using EZViewer (Eric Zimmerman Tools).
+
+12:55: Chat logs determined to be inconsequential to the investigation.
+
+13:11: Initial email analysis indicated potential tampering with Alison’s email addresses. New actor (alex@m57.biz) appears to control communications previously under Alison’s account.
+
+
+1/11/2026 – Email Artifact Analysis:
+
+13:46: Email analysis confirmed prior email address compromise:
+
+Alison’s email changed from Alison@m57.biz to Alex@m57.biz at 2008-07-19 19:31:00.
+
+Emails sent at 2008-07-19 19:32:51 show requests for sensitive documents using Alison@m57.biz.
+
+13:50: Email from tuckgorge@gmail.com requests background check documents from Jean.
+
+17:50: All analyzed files, original copies, and supporting documents loaded onto DFIR-B thumb drive for secure portability.
+
+
+Notes / Observations:
+
+All evidence handling maintained forensic integrity through hash verification and controlled storage.
+
+Autopsy was used to extract email artifacts; direct tagging of emails was limited due to PST artifact constraints.
+
+Preliminary analysis shows signs of email compromise and potential unauthorized attempts to access sensitive documents.

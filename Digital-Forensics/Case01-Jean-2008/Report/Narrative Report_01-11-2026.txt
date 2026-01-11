@@ -4,54 +4,61 @@ Case ID: M57-Jean
 
 
 
-Investigation: 
-=============
+Investigation Overview
 
-Through examination, a timeline of emails has been formulated. The following email artifacts have been extracted from the outlook.pst directory: 
-/img_nps-2008-jean.E01/vol_vol2/Documents and Settings/Jean/Local Settings/Application Data/Microsoft/Outlook/outlook.pst
+A forensic examination was conducted on the M57-Jean training image to assess potential unauthorized access and disclosure of sensitive company information. Email artifacts were extracted from the Outlook PST file associated with the user Jean. Screen captures referenced as SC-[x] correspond to images documented under Case01-Jean-2008/Screen_Captures.
 
-SC-[x] refers to the respective screen captures under Case01-Jean-2008/Screen_Captures.
-
-Timeline:
-=============
-
-2008-07-19 19:32:51 - Jean is contacted by an "alex" under alex@m57.biz, asking for financial projections. (See SC-1)
-
-2008-07-19 19:39:57 - Jean is contacted by "Alison" under alison@m57.biz, requesting for a spreadsheet containing sensitive information of current and prospective employees, including full names, current salary, and SSNs. A "P.S." message is attached in attempt to cover traces of this conversation. (See SC-2)
+The investigation focused on a sequence of email communications and spreadsheet activity that may indicate email compromise, impersonation, and attempts to obtain sensitive employee data.
 
 
-2008-07-19 19:43:48 - After a brief clarification period, Alison realizes her email was changed to alex@m57.biz in a "misconfiguration" error. Her email is changed to alison@m57.biz but her username remains "alex". (See SC-3)
+Timeline of Key Events:
+Date/Time (EDT)	Event
+===================================================================================================================
+
+2008-07-19 19:32:51	Jean receives an email from “alex” (alex@m57.biz) requesting financial projections. (SC-1)
+
+2008-07-19 19:39:57	Jean receives an email from “Alison” (alison@m57.biz) requesting a spreadsheet containing sensitive information, including employee 			names, salaries, and SSNs. A P.S. message is attached, likely attempting to obscure the conversation. (SC-2)
+
+2008-07-19 19:43:48	Alison’s email appears changed to alex@m57.biz due to misconfiguration or compromise. Her email reverts to alison@m57.biz, though 			her username remains “alex.” (SC-3)
+
+2008-07-19 19:50:19	Jean sends verification to Alison regarding her email address. (SC-4)
+
+2008-07-19 21:22:45	Jean receives an email from tuckgorge@gmail.com (non-trusted domain) under the alias alison@m57.biz, requesting the same sensitive 			documents. The urgency of the request suggests potential impersonation. (SC-5)
+
+2008-07-19 21:28:03	Spreadsheet m57biz.xls is created. Opening the sheet reveals an embedded image, likely intended to obscure the content from review. (SC-A, SC-B)
+2008-07-19 21:28:00	Jean sends the requested documents to the contact. (SC-6)
+
+2008-07-20 21:17:54	The contact confirms receipt of the documents. (SC-7)
+===================================================================================================================
 
 
-2008-07-19 19:50:19 - Verification of email address sent by Jean to Alison. (See SC-4)
-
-2008-07-19 21:22:45 - Jean is contacted by tuckgorge@gmail.com (Non-trusted domain) under username alison@m57.biz regarding the aforementioned sensitive documents. Urgency is given by the contact. Surface level examination would fool one to believe that this is Alison. (See SC-5)
+Analysis and Interpretation:
 
 
-2008-07-19 21:28:03 EDT - m57biz.xls is created. Upon opening this sheet, an image is shown. Likely an attempt to hide information from investigation. (See SC-A, SC-B)
+Two plausible scenarios were identified:
 
-2008-07-19 21:28:00 EDT - Jean sends the documents to the contact. (See SC-6)
+Case 1 – Internal Actor Manipulation
 
-2008-07-20 21:17:54 - The contact confirms receiving. (See SC-7)
+Alison may have intentionally altered her email addresses (alex@m57.biz, tuckgorge@gmail.com) to conceal her actions.
+This scenario implies deliberate confusion to maintain plausible deniability.
+Investigation is limited because analysis is restricted to Jean’s drive; Alison’s system has not been examined.
 
-Verdict: 
-=============
+Case 2 – External Email Compromise and Spear-Phishing
 
-There are two likely cases:
-
-Case 1: Alison purposefully changed her emails in order to cover her tracks in selling company secrets. 
--Causing confusion on email addresses purposefully (alex@m57.biz, tuckgorge@gmail.com) in order to maintain plausible deniability.
--This is still likely, but difficult to investigate further due to limitation of forensic analysis only to Jean's drive.
-
-
-Case 2: Sensitive information leakage via spear-phishing attempts and email spoofing.
--The Alex email conundrum is due to a hacked email attack on Alison, opening up her email address for use by bad actors.
--The correspondence at 2008-07-19 19:39:57 EDT is the first sign of email theft and impersonation.
--The recovery of Alison's email address at 2008-07-19 19:43:48 EDT likely prompts the bad actor to make a more aggressive attempt.
--A major spoof attempt at 2008-07-19 21:22:45 EDT is likely a last ditch effort to complete the spearphishing scheme.
--Lastly, the chain of events leaves Alison within the right to deny ever requesting the documents or seeing any email correspondence regarding them, since it all took place under alternative email addresses Alison allegedly had no access to.
+The email activity suggests Alison’s account may have been compromised, allowing a malicious actor to impersonate her.
+The correspondence at 2008-07-19 19:39:57 indicates the first potential unauthorized use of Alison’s email.
+The subsequent restoration of her account at 19:43:48 may have prompted the attacker to escalate the attempt.
+The 21:22:45 contact (tuckgorge@gmail.com) represents a further spoofing attempt to exfiltrate sensitive employee data.
+Evidence supports the conclusion that the chain of events could allow Alison to deny involvement, as the activity occurred under compromised or alternate email addresses.
 
 Conclusion:
 
-Case 1 and Case 2 are still viable as verdicts. Being that both cases are mutually exclusive, forensic analysis of Alison's drive is required for confirmation of one over the other by analyzing what email accounts she has on her machine.
-This being stated, current evidence shows bias toward Case 2 being true.
+Both Case 1 and Case 2 remain viable. Definitive determination requires forensic examination of Alison’s system to assess her email accounts and confirm whether activity originated from her or a third party.
+
+Current evidence favors Case 2 (external compromise and spear-phishing) as the most likely explanation for the attempted disclosure of sensitive employee information.
+
+Notes on Evidence Handling:
+
+All artifacts were extracted from the provided M57-Jean training image.
+PST email artifacts could not be directly tagged due to tool limitations in Autopsy 4.22.1; findings were documented via case notes and screen captures.
+SHA-256 hash verification confirmed the integrity of the evidence images throughout analysis.
