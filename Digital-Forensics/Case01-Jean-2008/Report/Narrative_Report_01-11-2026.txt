@@ -17,13 +17,13 @@ Date/Time (EDT)	Event
 
 2008-07-19 19:32:51	Jean receives an email from “alex” (alex@m57.biz) requesting financial projections. (SC-1)
 
-2008-07-19 19:39:57	Jean receives an email from “Alison” (alison@m57.biz) requesting a spreadsheet containing sensitive information, including employee 			names, salaries, and SSNs. A P.S. message is attached, likely attempting to obscure the conversation. (SC-2)
+2008-07-19 19:39:57	Jean receives an email from “Alison” (alison@m57.biz) requesting a spreadsheet containing sensitive information, including employee names, salaries, and SSNs. A P.S. message is attached, likely attempting to obscure the conversation. (SC-2)
 
-2008-07-19 19:43:48	Alison’s email appears changed to alex@m57.biz due to misconfiguration or compromise. Her email reverts to alison@m57.biz, though 			her username remains “alex.” (SC-3)
+2008-07-19 19:43:48	Alison’s email appears changed to alex@m57.biz due to misconfiguration or compromise. Her email reverts to alison@m57.biz, though her username remains “alex.” (SC-3)
 
 2008-07-19 19:50:19	Jean sends verification to Alison regarding her email address. (SC-4)
 
-2008-07-19 21:22:45	Jean receives an email from tuckgorge@gmail.com (non-trusted domain) under the alias alison@m57.biz, requesting the same sensitive 			documents. The urgency of the request suggests potential impersonation. (SC-5)
+2008-07-19 21:22:45	Jean receives an email from tuckgorge@gmail.com (non-trusted domain) under the alias alison@m57.biz, requesting the same sensitive documents. The urgency of the request suggests potential impersonation. (SC-5)
 
 2008-07-19 21:28:03	Spreadsheet m57biz.xls is created. Opening the sheet reveals an embedded image, likely intended to obscure the content from review. (SC-A, SC-B)
 2008-07-19 21:28:00	Jean sends the requested documents to the contact. (SC-6)
